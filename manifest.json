@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Filtre les offres d'emploi en masquant les entreprises sélectionnées.",
   "permissions": ["activeTab", "storage", "scripting"],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": ["https://www.linkedin.com/jobs/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -22,7 +22,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.linkedin.com/jobs/*"],
       "js": ["content.js"]
     }
   ]
